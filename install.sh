@@ -7,4 +7,4 @@ yum install -y -q gcc gcc-c++ make \
    libxslt libxslt-devel \
    libffi libffi-devel \
    libyaml libyaml-devel
-pip install -q -r requirements.txt
+pip install -r requirements.txt
