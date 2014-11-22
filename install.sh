@@ -7,4 +7,5 @@ yum install -y -q gcc gcc-c++ make \
    libxslt libxslt-devel \
    libffi libffi-devel \
    libyaml libyaml-devel
-pip install -r requirements.txt
+echo 'Installing python-*client... (it takes some time)'
+pip install -q -r requirements.txt
