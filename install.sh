@@ -9,3 +9,7 @@ yum install -y -q gcc gcc-c++ make \
    libyaml libyaml-devel
 echo 'Installing python-*client... (it takes some time)'
 pip install -q -r requirements.txt
+
+for service in nova neutron cinder keystone glance; do
+    wget -q -O /etc/bash_completion.d/${service} http://git.openstack.org/cgit/openstack/python-${service}client/plain/tools/${service}.bash_completion
+done
