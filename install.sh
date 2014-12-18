@@ -10,6 +10,7 @@ yum install -y -q gcc gcc-c++ make \
 echo 'Installing python-*client... (it takes some time)'
 pip install -q -r requirements.txt
 
+yum install -y bash-completion
 for service in nova neutron cinder keystone glance; do
     wget -q -O /etc/bash_completion.d/${service} http://git.openstack.org/cgit/openstack/python-${service}client/plain/tools/${service}.bash_completion
 done
